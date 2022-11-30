@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: camiloestradaapinestjsmongo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camiloestradaapinestjsmongo
+  template:
+    metadata:
+      labels:
+        app: camiloestradaapinestjsmongo 
+    spec:
+      containers:
+        - name: camiloestradaapinestjsmongo 
+          image: crcalidad.azurecr.io/camiloestradaapinestjsmongo
+          ports:
+          - containerPort: 80
